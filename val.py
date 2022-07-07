@@ -384,7 +384,7 @@ def main(opt):
                     LOGGER.info(f'\nRunning {f} --imgsz {opt.imgsz}...')
                     r, _, t = run(**vars(opt), plots=False)
                     y.append(r + t)  # results and times
-                np.savetxt(f, y, fmt='%10.4g')  # save
+#                 np.savetxt(f, y, fmt='%10.4g')  # save
             os.system('zip -r study.zip study_*.txt')
             plot_val_study(x=x)  # plot
 
